@@ -79,6 +79,7 @@ namespace eForms
 
             /////////////////////////////
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserRoleService, UserRoleService>();
             services.AddTransient<IProfileService, ProfileService>();
             /////////////////////////////
             services.AddTransient<IUploadService, UploadService>();

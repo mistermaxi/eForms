@@ -10,15 +10,14 @@ namespace eForms.Services.Models
 {
     public class UsersModel : DefaultModel
     {
-        //public int FormId { get; set; }
-        //public int RoleId { get; set; }
-
         public string Username { get; set; }
-
-        public string OfficePhone { get; set; }
-        
+        public string EmailAddress { get; set; }
+        public string OfficePhone { get; set; }        
 
         public string Remark { get; set; }
-        public string EmailAddress { get; set; }
+        
+        //public string Roles { get; set; }
+        public virtual tbl_eForm_UserRole tbl_eForm_UserRole { get; set; }        
+        //public IEnumerable<string> Roles { get; set; }
     }
 }

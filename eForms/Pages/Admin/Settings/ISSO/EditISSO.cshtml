@@ -1,0 +1,69 @@
+﻿@page
+@model eForms.Pages.Admin.EditISSOModel
+@{ ViewData["Title"] = "eForms Application";
+    ViewData["breadcrumb1"] = "Settings";
+    ViewData["breadcrumb2"] = "ISSO"; }
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>@ViewData["breadcrumb2"] - Edit</strong>
+                    </div>
+                    <form class="form-horizontal" method="post">
+                        <input type="hidden" asp-for="isso.Id" />
+                        <div class="card-body">
+
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="isso.Name"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="isso.Name" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="isso.Email"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="isso.Email" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="isso.Phone"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="isso.Phone" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="isso.Position"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="isso.Position" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="select1">Is Disabled?</label>
+                                <div class="col-md-9">
+                                    <select asp-for="isso.Disabled" class="form-control">
+                                        <option value="false">False</option>
+                                        <option value="true">True</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                            <a asp-page="ISSO" class="btn btn-danger">Back to List</a>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- /.col-->
+        </div>
+        <!-- /.row-->
+    </div>
+</div>

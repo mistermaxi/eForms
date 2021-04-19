@@ -1,0 +1,29 @@
+﻿@page
+@{ ViewData["Title"] = "Login";
+                Layout = "_LayoutFullScreen"; }
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-group">
+                    <div class="card p-4">
+                        <div class="card-body text-center">
+                            <h1>eForm</h1>
+                            <p class="text-muted">V 1.0.1</p>
+                            <img src="~/img/dos_seal.png" style="width:50%" />
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>Log out or Session Expired!</h2>
+                                    <a asp-page="Index" class="btn btn-primary px-4">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

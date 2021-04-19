@@ -1,0 +1,67 @@
+﻿@page
+@model eForms.Pages.Admin.CreateIPCModel
+@{ ViewData["Title"] = "eForms Application";
+    ViewData["breadcrumb1"] = "Settings";
+    ViewData["breadcrumb2"] = "IPC"; }
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>@ViewData["breadcrumb2"] - Add New</strong>
+                    </div>
+                    <form class="form-horizontal" method="post">
+                        <div class="card-body">
+
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="ipc.Name"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="ipc.Name" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="ipc.Email"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="ipc.Email" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="ipc.Phone"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="ipc.Phone" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input" asp-for="ipc.Position"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="ipc.Position" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="select1">Is Disabled?</label>
+                                <div class="col-md-9">
+                                    <select asp-for="ipc.Disabled" class="form-control">
+                                        <option value="false">False</option>
+                                        <option value="true">True</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                            <a asp-page="IPC" class="btn btn-danger">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- /.col-->
+        </div>
+        <!-- /.row-->
+    </div>
+</div>

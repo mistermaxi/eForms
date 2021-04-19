@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZfaLvvuGuUEtpb/hOy5+RFMumOQKV1YNx8XrUVU4ltvlSm+mU2ZHvxPQdE+6hYhE4p+pPoHYIVR25fSEXbP1AQ==",
+  "dgSpecHash": "stPuF/YR6ORTDLM7xM8pm4ThzE1I1yBRmFYiMOxrtMsloK0ckfDlP8BBLUAR2gvm4ZqZaZ9xcXmYPVdRXPa7xg==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms\\eForms.Web.csproj",
+  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms\\eForms\\eForms.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\max\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\max\\.nuget\\packages\\anglesharp.css\\0.14.2\\anglesharp.css.0.14.2.nupkg.sha512",

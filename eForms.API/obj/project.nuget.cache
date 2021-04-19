@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tuavxJ6o1lzKPyGZ+jDNiozbiHocL2W0Oqnb1vx06OnZ+fpOzs+XiMTy8BJQejTRhJfv0B0FDE3EBkrAiEWmHg==",
+  "dgSpecHash": "8+mwHScZZwEeOiOfqxc8Chb+llVwNvQalAWDLUJCoQMWST8TiNGxZBD/EOVL7Ff8yg2xyvvHu5drNMdfGMY2yw==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms.API\\eForms.API.csproj",
+  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms\\eForms.API\\eForms.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\max\\.nuget\\packages\\common.logging\\3.4.1\\common.logging.3.4.1.nupkg.sha512",
     "C:\\Users\\max\\.nuget\\packages\\common.logging.core\\3.4.1\\common.logging.core.3.4.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2mjPqgZhxkdXzaN5nxZEV4SjoXp3dTcxytXnnyK3Jrth175CUsnwvNQPTStmaUZxJ0TeBMbc2EjrvNkZSx/J0Q==",
+  "dgSpecHash": "duw4j4Yno8CNTDPVJzOPZLFOwsHtAe2CnPIPFPSwpJ3LJ5ifOHNKsgDRStgrQTJRzwIqaR6NpQGILsLuzyYJFQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms.Domain\\eForms.Domain.csproj",
+  "projectFilePath": "C:\\Temp\\01-Projects\\Web Apps\\ASP.NET Core\\eForms\\eForms\\eForms.Domain\\eForms.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\max\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\max\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

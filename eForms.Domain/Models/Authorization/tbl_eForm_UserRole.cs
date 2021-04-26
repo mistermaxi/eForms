@@ -10,9 +10,9 @@ namespace eForms.Domain.Models
 {
     public class tbl_eForm_UserRole : DefaultModel
     {
-        public int UserId { get; set; }
         public int FormId { get; set; }
-        public string Roles { get; set; }
-
+        public int UserId { get; set; }
+        public string Role { get; set; }
+        
     }
 }

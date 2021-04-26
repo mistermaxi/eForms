@@ -10,10 +10,12 @@ namespace eForms.Services.Models
 {
     public class UserRolesModel : DefaultModel
     {
-        public int UserId { get; set; }
         public int FormId { get; set; }
-        public Roles Roles { get; set; }
-        //public virtual tbl_eForm_UserRole tbl_eForm_UserRole { get; set; }
-        public virtual tbl_rForm tbl_rForm { get; set; }
+        public int UserId { get; set; }
+        //public string EmailAddress { get; set; }
+        public Roles Role { get; set; }
+        public virtual UsersModel Users { get; set; }
+
+        public virtual ICollection<UsersModel> UserRoles { get; set; }
     }
 }

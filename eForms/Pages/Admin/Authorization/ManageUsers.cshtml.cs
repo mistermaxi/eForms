@@ -12,15 +12,12 @@ namespace eForms.Pages.Admin
     public class ManageUsersModel : PageModel
     {
         public IEnumerable<UsersModel> users { get; set; }
-        public IEnumerable<UserRolesModel> userroles { get; set; }
 
         IUserService userService;
-        IUserRoleService userroleService;
 
-        public ManageUsersModel(IUserService _userService, IUserRoleService _userroleService)
+        public ManageUsersModel(IUserService _userService)
         {
             userService = _userService;
-            userroleService = _userroleService;
         }
         public async Task OnGet()
         {

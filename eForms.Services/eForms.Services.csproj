@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\ExceptionHandler\**" />
+    <Content Remove="Services\ExceptionHandler\**" />
+    <EmbeddedResource Remove="Services\ExceptionHandler\**" />
+    <None Remove="Services\ExceptionHandler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Interfaces\IAuthorizationService.cs" />
     <Compile Remove="Interfaces\Permissions\IClaimsTransformation.cs" />
     <Compile Remove="Models\Entity.cs" />

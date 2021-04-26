@@ -1,0 +1,16 @@
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\eForms.Domain.deps.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\eForms.Domain.runtimeconfig.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\eForms.Domain.dll
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Release\netcoreapp3.1\eForms.Domain.pdb
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.dll
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.pdb
+C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Release\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache

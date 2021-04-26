@@ -18,12 +18,13 @@ namespace eForms.Services.Interfaces
         private IeFormsContext context;
         private IMapper mapper;
         private ISanitizationService sanitizer;
-        public BuildingService(IeFormsContext _context, IMapper _mapper, ISanitizationService _sanitizer)
+        private IAuthService authService;
+        public BuildingService(IeFormsContext _context, IMapper _mapper, ISanitizationService _sanitizer, IAuthService _authService)
         {
             context = _context;
             mapper = _mapper;
             sanitizer = _sanitizer;
-            //authorizationService = _authorizationService;
+            authService = _authService;
         }
         private DbSet<tbl_rBuildingAnnex> GetDbSet()
         {
@@ -74,7 +75,7 @@ namespace eForms.Services.Interfaces
         }
         public async Task DeleteBuilding(int id)
         {
-            //await authorizationService.Challenge(PermissionType.ManageCountries, id);
+            await authService.VerifyRole(Roles.Admin, 0);
             context.tbl_rBuildingsAnnex.Remove(new tbl_rBuildingAnnex() { Id = id });
             await context.SaveChangesAsync();
         }

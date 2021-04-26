@@ -79,7 +79,6 @@ namespace eForms
 
             /////////////////////////////
             services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IUserRoleService, UserRoleService>();
             services.AddTransient<IProfileService, ProfileService>();
             /////////////////////////////
             services.AddTransient<IUploadService, UploadService>();
@@ -101,8 +100,8 @@ namespace eForms
             services.AddTransient<IStatesService, StatesService>();
 
             /////////////////////////////
-            
-
+            services.AddTransient<IAuthService, AuthService>();
+            /////////////////////////////
 
             services.AddAuthorization();
             //services.AddAuthentication(IISDefaults.AuthenticationScheme); 
@@ -136,10 +135,18 @@ namespace eForms
 
             if (env.IsDevelopment())
             {
+                //app.UseExceptionHandler("/Error");
+                //app.UseStatusCodePagesWithRedirects("/Error/{0}");
+                //app.UseStatusCodePagesWithReExecute("/error", "?code={0}");
+                //app.UseMiddleware<ExceptionHandlerMiddleware>();
+
                 app.UseDeveloperExceptionPage();
             }
             else
             {
+                //app.UseStatusCodePagesWithRedirects("/Error/{0}");
+                //app.UseStatusCodePagesWithReExecute("/error", "?code={0}");
+
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();

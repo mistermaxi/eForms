@@ -4,7 +4,7 @@ using eForms.Domain.Enums;
 using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using eForms.Services.Models;
-using eForms.Services.Permissions;
+//using eForms.Services.Permissions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +27,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rSection> GetDbSet()
+        private DbSet<Sections> GetDbSet()
         {
             return context.tbl_rSections;
         }
@@ -35,7 +35,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<SectionModel>> GetAllSections()
         {
 
-            List<SectionModel> dto = mapper.Map<List<tbl_rSection>, List<SectionModel>>(await GetDbSet().ToListAsync());
+            List<SectionModel> dto = mapper.Map<List<Sections>, List<SectionModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -43,32 +43,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rSection> GetQueryable()
+        private IQueryable<Sections> GetQueryable()
         {
             return context.tbl_rSections;
         }
         public async Task<SectionModel> ReadAsync(int id)
         {
-            tbl_rSection model = await GetDbSet()
+            Sections model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<SectionModel>(model);
         }
         public async Task<int> CreateSection(SectionModel model)
         {
-            tbl_rSection section = mapper.Map<tbl_rSection>(model);
+            Sections section = mapper.Map<Sections>(model);
             context.tbl_rSections.Add(section);
             await context.SaveChangesAsync();
             return section.Id;
         }
         public async Task UpdateSectionAsync(SectionModel model)
         {
-            context.tbl_rSections.Update(mapper.Map<tbl_rSection>(model));
+            context.tbl_rSections.Update(mapper.Map<Sections>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<SectionModel>> SearchForSectionsAsync(string search)
         {
-            List<tbl_rSection> sections = await context.tbl_rSections
+            List<Sections> sections = await context.tbl_rSections
                 .Where(x => x.sectionname.Contains(search) || x.sectionabbr.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -80,7 +80,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteSection(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageMilRank, id);
-            context.tbl_rSections.Remove(new tbl_rSection() { Id = id });
+            context.tbl_rSections.Remove(new Sections() { Id = id });
             await context.SaveChangesAsync();
         }
     }

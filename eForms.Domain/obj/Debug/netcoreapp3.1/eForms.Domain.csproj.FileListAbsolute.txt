@@ -43,22 +43,6 @@ C:\==MX ENT==\01 Projects\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticweb
 C:\==MX ENT==\01 Projects\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
 C:\==MX ENT==\01 Projects\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
 C:\==MX ENT==\01 Projects\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.dll
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.pdb
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
-C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
@@ -75,3 +59,67 @@ C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Debug\netcorea
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
 C:\==MX ENT==\01 Projects\OpenNet\eForms.FreeUI\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\scopedcss\bundle\eForms.Domain.styles.css
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\scopedcss\bundle\eForms.Domain.styles.css
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\Max\DIN\Web Apps\ASP.Net Core\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache
+C:\==MX ENT==\01 Projects\OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.deps.json
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.json
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.runtimeconfig.dev.json
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\1-OpenNet\eForms\eForms.Domain\bin\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csprojAssemblyReference.cache
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfoInputs.cache
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.AssemblyInfo.cs
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.csproj.CoreCompileInputs.cache
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.RazorTargetAssemblyInfo.cache
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.Manifest.cache
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Domain.StaticWebAssets.xml
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.dll
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.pdb
+C:\1-OpenNet\eForms\eForms.Domain\obj\Debug\netcoreapp3.1\eForms.Domain.genruntimeconfig.cache

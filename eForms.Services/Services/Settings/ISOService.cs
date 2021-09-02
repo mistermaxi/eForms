@@ -25,7 +25,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rISO> GetDbSet()
+        private DbSet<ISO> GetDbSet()
         {
             return context.tbl_rISO;
         }
@@ -33,7 +33,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<ISOModel>> GetAllISO()
         {
 
-            List<ISOModel> dto = mapper.Map<List<tbl_rISO>, List<ISOModel>>(await GetDbSet().ToListAsync());
+            List<ISOModel> dto = mapper.Map<List<ISO>, List<ISOModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -41,32 +41,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rISO> GetQueryable()
+        private IQueryable<ISO> GetQueryable()
         {
             return context.tbl_rISO;
         }
         public async Task<ISOModel> ReadAsync(int id)
         {
-            tbl_rISO model = await GetDbSet()
+            ISO model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<ISOModel>(model);
         }
         public async Task<int> CreateISO(ISOModel model)
         {
-            tbl_rISO iso = mapper.Map<tbl_rISO>(model);
+            ISO iso = mapper.Map<ISO>(model);
             context.tbl_rISO.Add(iso);
             await context.SaveChangesAsync();
             return iso.Id;
         }
         public async Task UpdateISOAsync(ISOModel model)
         {
-            context.tbl_rISO.Update(mapper.Map<tbl_rISO>(model));
+            context.tbl_rISO.Update(mapper.Map<ISO>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<ISOModel>> SearchForISOAsync(string search)
         {
-            List<tbl_rISO> ipc = await context.tbl_rISO
+            List<ISO> ipc = await context.tbl_rISO
                 .Where(x => x.Name.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,7 +75,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteISO(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageIPC, id);
-            context.tbl_rISO.Remove(new tbl_rISO() { Id = id });
+            context.tbl_rISO.Remove(new ISO() { Id = id });
             await context.SaveChangesAsync();
         }
     }

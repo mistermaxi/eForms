@@ -21,41 +21,59 @@ namespace eForms.Domain.Context
         
        
         #region Authorization
-        public DbSet<tbl_eForm_User> tbl_eForm_Users { get; set; }
-        public DbSet<tbl_eForm_UserRole> tbl_eForm_UserRoles { get; set; }
+        public DbSet<User> tbl_Users { get; set; }
+        public DbSet<UserRole> tbl_UserRoles { get; set; }
         #endregion
 
         #region eForms
-        public DbSet<tbl_eFormReqOpenNet> tbl_eFormReqOpenNet { get; set; }
-        public DbSet<tbl_eFormReqClassNet> tbl_eFormReqClassNet { get; set; }
-        public DbSet<tbl_eFormNewArrvEMP> tbl_eFormNewArrvEMP { get; set; }
-        public DbSet<tbl_eFormUploadDoc> tbl_eFormUploadDocs { get; set; }
+        public DbSet<OpenNetReq> tbl_OpenNetReq { get; set; }
+        public DbSet<ClassNetReq> tbl_ClassNetReq { get; set; }
+        public DbSet<DS7642> tbl_DS7642 { get; set; }
+        public DbSet<DS7642Detail> tbl_DS7642Detail { get; set; }
+        public DbSet<NewArrvEMP> tbl_NewArrvEMP { get; set; }
+        public DbSet<NewArrvDEP> tbl_NewArrvDEP { get; set; }
+        public DbSet<NewArrvEMERG> tbl_NewArrvEMERG { get; set; }
+        public DbSet<NewArrvLANG> tbl_NewArrvLANG { get; set; }
+        public DbSet<UploadDoc> tbl_UploadDocs { get; set; }
+        
+        #endregion
 
+        #region Inventory
+        public DbSet<Manufacturer> tbl_Manufacturer { get; set; }
+        public DbSet<MBDevice> tbl_MBDevice { get; set; }
+        public DbSet<Model> tbl_Model { get; set; }
+        public DbSet<Sim> tbl_Sim { get; set; }
+        public DbSet<Transaction> tbl_Transaction { get; set; }
+        public DbSet<TransactionDetail> tbl_TransactionDetail { get; set; }
         #endregion
 
         #region settings
-        public DbSet<tbl_rBuildingAnnex> tbl_rBuildingsAnnex { get; set; }
-        public DbSet<tbl_rForm> tbl_rForms { get; set; }
-        public DbSet<tbl_rCountry> tbl_rCountries { get; set; }
-        public DbSet<tbl_rEmployeeType> tbl_rEmployeeTypes { get; set; }
-        public DbSet<tbl_rISO> tbl_rISO { get; set; }
-        public DbSet<tbl_rISSO> tbl_rISSO { get; set; }
-        public DbSet<tbl_rIPC> tbl_rIPCs { get; set; }
-        public DbSet<tbl_rLanguage> tbl_rLanguages { get; set; }
-        public DbSet<tbl_rMilitaryRank> tbl_rMilitaryRanks { get; set; }
-        public DbSet<tbl_rPost> tbl_rPosts { get; set; }
-        public DbSet<tbl_rPrefix> tbl_rPrefixes { get; set; }
-        public DbSet<tbl_rRelationship> tbl_rRelationships { get; set; }
-        public DbSet<tbl_rSection> tbl_rSections { get; set; }
-        public DbSet<tbl_rState> tbl_rStates { get; set; }
+        public DbSet<BuildingAnnexes> tbl_rBuildingsAnnex { get; set; }
+        public DbSet<Forms> tbl_rForms { get; set; }
+        public DbSet<Country> tbl_rCountries { get; set; }
+        public DbSet<EmployeeType> tbl_rEmployeeTypes { get; set; }
+        public DbSet<ISO> tbl_rISO { get; set; }
+        public DbSet<ISSO> tbl_rISSO { get; set; }
+        public DbSet<IPC> tbl_rIPCs { get; set; }
+        public DbSet<Languages> tbl_rLanguages { get; set; }
+        public DbSet<MilitaryRanks> tbl_rMilitaryRanks { get; set; }
+        public DbSet<Posts> tbl_rPosts { get; set; }
+        public DbSet<Prefixes> tbl_rPrefixes { get; set; }
+        public DbSet<Relationships> tbl_rRelationships { get; set; }
+        public DbSet<Sections> tbl_rSections { get; set; }
+        public DbSet<State> tbl_rStates { get; set; }
+        public DbSet<SMTP> tbl_rSMTP { get; set; }
+        public DbSet<ADUser> vw_ADSI { get; set; }
         #endregion
 
+        
 
         #region transaction management
         public IDbContextTransaction BeginTransaction() { return Database.BeginTransaction(); }
         public void CommitTransaction() { Database.CommitTransaction(); }
         public void RollBackTransaction() { Database.RollbackTransaction(); }
         #endregion
+
 
         private IHttpContextAccessor httpContextAccessor;
 
@@ -64,7 +82,16 @@ namespace eForms.Domain.Context
             httpContextAccessor = _httpContextAccessor;
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<eForms.Domain.Models.ADUser>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToView("vw_ADSI");
+            });
 
+            eFormsContextSeed.Seed(modelBuilder);
+        }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

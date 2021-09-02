@@ -25,7 +25,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rLanguage> GetDbSet()
+        private DbSet<Languages> GetDbSet()
         {
             return context.tbl_rLanguages;
         }
@@ -33,7 +33,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<LanguageModel>> GetAllLanguages()
         {
 
-            List<LanguageModel> dto = mapper.Map<List<tbl_rLanguage>, List<LanguageModel>>(await GetDbSet().ToListAsync());
+            List<LanguageModel> dto = mapper.Map<List<Languages>, List<LanguageModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -41,32 +41,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rLanguage> GetQueryable()
+        private IQueryable<Languages> GetQueryable()
         {
             return context.tbl_rLanguages;
         }
         public async Task<LanguageModel> ReadAsync(int id)
         {
-            tbl_rLanguage model = await GetDbSet()
+            Languages model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<LanguageModel>(model);
         }
         public async Task<int> CreateLanguage(LanguageModel model)
         {
-            tbl_rLanguage language = mapper.Map<tbl_rLanguage>(model);
+            Languages language = mapper.Map<Languages>(model);
             context.tbl_rLanguages.Add(language);
             await context.SaveChangesAsync();
             return language.Id;
         }
         public async Task UpdateLanguageAsync(LanguageModel model)
         {
-            context.tbl_rLanguages.Update(mapper.Map<tbl_rLanguage>(model));
+            context.tbl_rLanguages.Update(mapper.Map<Languages>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<LanguageModel>> SearchForLanguagesAsync(string search)
         {
-            List<tbl_rLanguage> languages = await context.tbl_rLanguages
+            List<Languages> languages = await context.tbl_rLanguages
                 .Where(x => x.LangDesc.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,7 +75,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteLanguage(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageISSO, id);
-            context.tbl_rLanguages.Remove(new tbl_rLanguage() { Id = id });
+            context.tbl_rLanguages.Remove(new Languages() { Id = id });
             await context.SaveChangesAsync();
         }
     }

@@ -26,7 +26,7 @@ namespace eForms.Services.Services
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rPost> GetDbSet()
+        private DbSet<Posts> GetDbSet()
         {
             return context.tbl_rPosts;
         }
@@ -34,7 +34,7 @@ namespace eForms.Services.Services
         public async Task<List<PostModel>> GetAllPosts()
         {
 
-            List<PostModel> dto = mapper.Map<List<tbl_rPost>, List<PostModel>>(await GetDbSet().ToListAsync());
+            List<PostModel> dto = mapper.Map<List<Posts>, List<PostModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -42,32 +42,32 @@ namespace eForms.Services.Services
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rPost> GetQueryable()
+        private IQueryable<Posts> GetQueryable()
         {
             return context.tbl_rPosts;
         }
         public async Task<PostModel> ReadAsync(int id)
         {
-            tbl_rPost model = await GetDbSet()
+            Posts model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<PostModel>(model);
         }
         public async Task<int> CreatePost(PostModel model)
         {
-            tbl_rPost post = mapper.Map<tbl_rPost>(model);
+            Posts post = mapper.Map<Posts>(model);
             context.tbl_rPosts.Add(post);
             await context.SaveChangesAsync();
             return post.Id;
         }
         public async Task UpdatePostAsync(PostModel model)
         {
-            context.tbl_rPosts.Update(mapper.Map<tbl_rPost>(model));
+            context.tbl_rPosts.Update(mapper.Map<Posts>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<PostModel>> SearchForPostsAsync(string search)
         {
-            List<tbl_rPost> posts = await context.tbl_rPosts
+            List<Posts> posts = await context.tbl_rPosts
                 .Where(x => x.PostCity.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -76,7 +76,7 @@ namespace eForms.Services.Services
         public async Task DeletePost(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageMilRank, id);
-            context.tbl_rPosts.Remove(new tbl_rPost() { Id = id });
+            context.tbl_rPosts.Remove(new Posts() { Id = id });
             await context.SaveChangesAsync();
         }
     }

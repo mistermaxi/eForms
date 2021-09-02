@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\ADSI\**" />
+    <Content Remove="Models\ADSI\**" />
+    <EmbeddedResource Remove="Models\ADSI\**" />
+    <None Remove="Models\ADSI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Models\AdminConfiguration.cs" />
     <Compile Remove="Models\Entity.cs" />
     <Compile Remove="Models\MonitoredEntity.cs" />
@@ -17,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Inventory\" />
+    <Compile Include="Models\ADSI\ADUser.cs" />
   </ItemGroup>
 
   <ItemGroup>

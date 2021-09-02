@@ -1,0 +1,40 @@
+﻿@page
+@model eForms.Pages.SendMailModel
+@{
+    ViewData["breadcrumb2"] = "Send Email";
+}
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-md-6 col-lg-12">
+                <h2>Send SMTP Email</h2>
+                <font color="red">@ViewData["EmailAddress"]</font>
+                <br />
+            <form class="form-horizontal" method="post">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        Email Address: <input id="mail" name="mail" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <input type="submit" value="Submit" class="btn btn-primary" asp-page-handler="Send" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <input type="submit" value="SendEmailAsync" class="btn btn-primary" asp-page-handler="Async" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <input type="submit" value="SendEmailHelper" class="btn btn-primary" asp-page-handler="SendEmailHelper" />
+                    </div>
+                </div>
+            </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>

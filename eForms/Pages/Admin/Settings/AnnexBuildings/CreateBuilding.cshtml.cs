@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using eForms.Services.Models;
+using eForms.Domain.Enums;
 
 namespace eForms.Pages.Admin
 {
@@ -19,15 +20,26 @@ namespace eForms.Pages.Admin
 
 
         IBuildingService buildingService;
+        IAuthService authService;
 
-        public CreateBuildingModel(IBuildingService _buildingService)
+        public CreateBuildingModel(IBuildingService _buildingService, IAuthService _authService)
         {
             buildingService = _buildingService;
+            authService = _authService;
         }
 
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            buildings = await buildingService.GetAllBuildings();
+            if (await authService.Check(Roles.Manager, 0) == false)
+            {
+                return RedirectToPage("/Error", "Error", new { @Id = 401 });
+            }
+            else
+            {
+                buildings = await buildingService.GetAllBuildings();
+                return Page();
+            }
+            
 
         }
         public async Task<IActionResult> OnPost()

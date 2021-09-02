@@ -8,6 +8,7 @@ using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using eForms.Services.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using eForms.Domain.Enums;
 
 namespace eForms.Pages.Admin
 {
@@ -19,15 +20,25 @@ namespace eForms.Pages.Admin
         public BuildingAnnexModel building { get; set; }
         
         IBuildingService buildingService;
-
-        public EditBuildingModel(IBuildingService _buildingService)
+        IAuthService authService;
+        public EditBuildingModel(IBuildingService _buildingService, IAuthService _authService)
         {
             buildingService = _buildingService;
+            authService = _authService;
         }
 
-        public async Task OnGet(int id)
+        public async Task<IActionResult> OnGet(int id)
         {
-            building = await buildingService.ReadAsync(id);
+            if (await authService.Check(Roles.Manager, 0) == false)
+            {
+                return RedirectToPage("/Error", "Error", new { @Id = 401 });
+            }
+            else
+            {
+                building = await buildingService.ReadAsync(id);
+                return Page();
+            }
+            
         }
         public async Task<IActionResult> OnPost()
         {

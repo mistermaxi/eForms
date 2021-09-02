@@ -32,16 +32,16 @@
                     <tbody>
                         @foreach (var item in Model.relationships)
                         {
-        <tr>
-            <td>@Html.DisplayFor(m => item.Relationship)</td>
-            <td class="text-center">@Html.DisplayFor(m => item.CreatedDate)</td>
-            <td class="text-center">@Html.DisplayFor(m => item.ModifiedDate)</td>
-            <td class="text-center">
-                <a asp-page="EditRelationship" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Edit</a>
-                <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure do you want to delete this record?')" class="btn btn-danger btn-sm">Del</button>
+                        <tr>
+                            <td>@Html.DisplayFor(m => item.Relationship)</td>
+                            <td class="text-center">@item.CreatedDate.ToString("MM/dd/yyyy")</td>
+                            <td class="text-center">@item.ModifiedDate.ToString("MM/dd/yyyy")</td>
+                            <td class="text-center">
+                                <a asp-page="EditRelationship" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Edit</a>
+                                <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure do you want to delete this record?')" class="btn btn-danger btn-sm">Del</button>
 
-            </td>
-        </tr>
+                            </td>
+                        </tr>
 }
 
                     </tbody>

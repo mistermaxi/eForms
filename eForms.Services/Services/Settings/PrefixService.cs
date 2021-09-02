@@ -25,7 +25,7 @@ namespace eForms.Services.Services
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rPrefix> GetDbSet()
+        private DbSet<Prefixes> GetDbSet()
         {
             return context.tbl_rPrefixes;
         }
@@ -33,7 +33,7 @@ namespace eForms.Services.Services
         public async Task<List<PrefixModel>> GetAllPrefixes()
         {
 
-            List<PrefixModel> dto = mapper.Map<List<tbl_rPrefix>, List<PrefixModel>>(await GetDbSet().ToListAsync());
+            List<PrefixModel> dto = mapper.Map<List<Prefixes>, List<PrefixModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -41,32 +41,32 @@ namespace eForms.Services.Services
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rPrefix> GetQueryable()
+        private IQueryable<Prefixes> GetQueryable()
         {
             return context.tbl_rPrefixes;
         }
         public async Task<PrefixModel> ReadAsync(int id)
         {
-            tbl_rPrefix model = await GetDbSet()
+            Prefixes model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<PrefixModel>(model);
         }
         public async Task<int> CreatePrefix(PrefixModel model)
         {
-            tbl_rPrefix prefix = mapper.Map<tbl_rPrefix>(model);
+            Prefixes prefix = mapper.Map<Prefixes>(model);
             context.tbl_rPrefixes.Add(prefix);
             await context.SaveChangesAsync();
             return prefix.Id;
         }
         public async Task UpdatePrefixAsync(PrefixModel model)
         {
-            context.tbl_rPrefixes.Update(mapper.Map<tbl_rPrefix>(model));
+            context.tbl_rPrefixes.Update(mapper.Map<Prefixes>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<PrefixModel>> SearchForPrefixesAsync(string search)
         {
-            List<tbl_rPrefix> prefixes = await context.tbl_rPrefixes
+            List<Prefixes> prefixes = await context.tbl_rPrefixes
                 .Where(x => x.PrefixTitle.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,7 +75,7 @@ namespace eForms.Services.Services
         public async Task DeletePrefix(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageMilRank, id);
-            context.tbl_rPrefixes.Remove(new tbl_rPrefix() { Id = id });
+            context.tbl_rPrefixes.Remove(new Prefixes() { Id = id });
             await context.SaveChangesAsync();
         }
     }

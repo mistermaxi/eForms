@@ -75,6 +75,12 @@ namespace eForms.Domain.Enums
         [Display(Name = "Disapproved")]
         Cancelled
     }
+    public enum EmailStatus
+    {
+        Opened = 0,
+        Sent = 1,
+        Failed = 2
+    }
     public enum eFormRole
     {
         [Display(Name = "User")]
@@ -152,4 +158,32 @@ namespace eForms.Domain.Enums
         [Display(Name = "True")]
         True = 1
     }
+    public enum LanguageLevel
+    {
+        [Display(Name = "0")]
+        Zero,
+        [Display(Name = "0+")]
+        ZeroPlus,
+        [Display(Name = "1")]
+        One,
+        [Display(Name = "1+")]
+        OnePlus,
+        [Display(Name = "2")]
+        Two,
+        [Display(Name = "2+")]
+        TwoPlus,
+        [Display(Name = "3")]
+        Three,
+        [Display(Name = "3+")]
+        ThreePlus,
+        [Display(Name = "4")]
+        Four,
+        [Display(Name = "4+")]
+        FourPlus,
+        [Display(Name = "5")]
+        Five
+    }
+    public enum MessageType { Success, Error, Info, Warning };
+    
+
 }

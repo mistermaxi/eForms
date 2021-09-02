@@ -14,10 +14,13 @@ namespace eForms.Services.Interfaces
     {
         Task<List<UsersModel>> GetAllUsers();
         public Task<int> GetUserId(string email);
-        public Task<int> GetUserIdOrCreate(string email);
+        public Task<int> CreateUserRole(UsersModel umodel, UserRolesModel model, string email, int formid);
+
         public Task UpdateAsync(UsersModel model);
         Task<List<UsersModel>> SearchForUsersAsync(string search);
         Task<UsersModel> ReadAsync(string search);
+        Task<UsersModel> ReadUserNameAsync(string search);
+        Task<UsersModel> ReadUserRoleAsync(int id);
 
         Task DeleteUser(int Id);
     }

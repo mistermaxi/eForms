@@ -1,4 +1,6 @@
-﻿<header class="app-header navbar">
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<header class="app-header navbar">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,14 +42,15 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link nav-link" data-toggle="dropdown" href="~/#" role="button" aria-haspopup="true" aria-expanded="false">
-                @*@User.Identity.Name*@
+
                 <img class="img-avatar" src="~/img/avatars/8.jpg" alt="webmasterbkk@state.gov">
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header text-center">
-                    <strong>@User.Identity.Name</strong>
+                    <strong>@HttpContextAccessor.HttpContext.Session.GetString("authName")@*@User.Identity.Name*@</strong>
+
                 </div>
-                <a class="dropdown-item" href="/Main/Profile">
+                <a class="dropdown-item" href="/Main/EditProfile?id=@HttpContextAccessor.HttpContext.Session.GetString("auth")">
                     <i class="fa fa-user"></i> Profile
                 </a>
                 <a class="dropdown-item" href="/Login">

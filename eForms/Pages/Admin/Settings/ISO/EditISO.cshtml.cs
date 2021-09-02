@@ -8,6 +8,7 @@ using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using eForms.Services.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 
 namespace eForms.Pages.Admin
 {
@@ -25,9 +26,20 @@ namespace eForms.Pages.Admin
             isoService = _isoService;
         }
 
-        public async Task OnGet(int id)
+        public async Task<IActionResult> OnGet(int id)
         {
+            //string sessionrole = HttpContext.Session.GetString("authRole").ToString().Trim();
+            //if (sessionrole == "Admin")
+            //{
+            //    iso = await isoService.ReadAsync(id);
+            //    return Page();
+            //}
+            //else
+            //{
+            //    return RedirectToPage("/Error", "Error", new { @Id = 401 });
+            //}                
             iso = await isoService.ReadAsync(id);
+            return Page();
         }
         public async Task<IActionResult> OnPost()
         {

@@ -25,7 +25,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rIPC> GetDbSet()
+        private DbSet<IPC> GetDbSet()
         {
             return context.tbl_rIPCs;
         }
@@ -33,7 +33,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<IPCModel>> GetAllIPC()
         {
 
-            List<IPCModel> dto = mapper.Map<List<tbl_rIPC>, List<IPCModel>>(await GetDbSet().ToListAsync());
+            List<IPCModel> dto = mapper.Map<List<IPC>, List<IPCModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -41,32 +41,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rIPC> GetQueryable()
+        private IQueryable<IPC> GetQueryable()
         {
             return context.tbl_rIPCs;
         }
         public async Task<IPCModel> ReadAsync(int id)
         {
-            tbl_rIPC model = await GetDbSet()
+            IPC model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<IPCModel>(model);
         }
         public async Task<int> CreateIPC(IPCModel model)
         {
-            tbl_rIPC ipc = mapper.Map<tbl_rIPC>(model);
+            IPC ipc = mapper.Map<IPC>(model);
             context.tbl_rIPCs.Add(ipc);
             await context.SaveChangesAsync();
             return ipc.Id;
         }
         public async Task UpdateIPCAsync(IPCModel model)
         {
-            context.tbl_rIPCs.Update(mapper.Map<tbl_rIPC>(model));
+            context.tbl_rIPCs.Update(mapper.Map<IPC>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<IPCModel>> SearchForIPCAsync(string search)
         {
-            List<tbl_rIPC> ipc = await context.tbl_rIPCs
+            List<IPC> ipc = await context.tbl_rIPCs
                 .Where(x => x.Name.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,7 +75,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteIPC(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageIPC, id);
-            context.tbl_rIPCs.Remove(new tbl_rIPC() { Id = id });
+            context.tbl_rIPCs.Remove(new IPC() { Id = id });
             await context.SaveChangesAsync();
         }
     }

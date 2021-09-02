@@ -1,12 +1,64 @@
 ﻿@page
+@model eForms.Pages.eFormsModel
 @{ ViewData["Title"] = "eForms Application";
-                ViewData["breadcrumb1"] = "Dashboard";
-                ViewData["breadcrumb2"] = "eForms"; }
+    ViewData["breadcrumb1"] = "Dashboard";
+    ViewData["breadcrumb2"] = "eForms"; }
 <div class="container-fluid">
     <div class="animated fadeIn">
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <h2>eForms Dashboard</h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    @if (Model.eformRequests.Count() > 0)
+                    {
+        <table class="table table-responsive-sm table-bordered table-striped table-sm" id="eformtbl">
+            <thead>
+                <tr>
+                    <th class="text-center">Username</th>
+                    <th class="text-center">Email Address</th>
+                    <th class="text-center">Role</th>
+                    <th class="text-center">Form</th>
+                    <th class="text-center">Disabled</th>
+                    <th class="text-center">Modified Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.eformRequests)
+                {
+<tr>
+    <td>@Html.DisplayFor(m => item.Id)</td>
+    <td>@Html.DisplayFor(m => item.FirstName)</td>
+    <td class="text-center">@*@Html.DisplayFor(m => item.Role)*@</td>
+    <td>@*@Html.DisplayFor(m => item.FormTitle)*@</td>
+    <td class="text-center">
+        @*@Html.DisplayFor(m => item.Disabled)*@
+        @*@if (item.Disabled)
+        {<text>Yes</text>}
+    else
+    {<text>No</text>}*@
+
+    </td>
+    @*<td class="text-center">@item.CreatedDate.ToString("MM/dd/yyyy")</td>*@
+    <td class="text-center">@item.ModifiedDate.ToString("MM/dd/yyyy")</td>
+    <td class="text-center">
+        <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Edit</a>
+        <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure do you want to delete this record?')" class="btn btn-danger btn-sm">Del</button>
+
+    </td>
+</tr>
+}
+
+            </tbody>
+        </table> }
+    else
+    {
+<p>No record returns</p>}
+
+                </form>
             </div>
         </div>
     </div>

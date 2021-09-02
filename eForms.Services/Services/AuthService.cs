@@ -4,6 +4,7 @@ using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Graph;
 using System;
@@ -24,13 +25,12 @@ namespace eForms.Services.Interfaces
     public class AuthService : IAuthService
     {
         private IeFormsContext context;
-        private IHttpContextAccessor httpContextAccessor;
+        private IHttpContextAccessor httpContextAccessor;        
 
         public AuthService(IeFormsContext _context, IHttpContextAccessor _httpContextAccessor)
         {
             context = _context;
             httpContextAccessor = _httpContextAccessor;
-
         }
         public static bool IsInGroup(string groupName)
         {
@@ -52,19 +52,22 @@ namespace eForms.Services.Interfaces
             var myIdentity = WindowsIdentity.GetCurrent();
             return myIdentity;
         }
-        public static string GetUserId()
+        //public static string GetUserId()
+        //{
+        //    var id = GetUserIdWithDomain().Name.Split('\\');
+        //    return id[1];
+        //}
+        public string GetUserWithoutDomain()
         {
-            var id = GetUserIdWithDomain().Name.Split('\\');
-            return id[1];
-        }
-        public static string GetClaimUser()
-        {
-            //var username = HttpContext.Current.User.Identity.Name;
-            var username = GetUserIdWithDomain().Name.Split('\\');
+            var username = WindowsIdentity.GetCurrent().Name.Split('\\');
             return username[1];
         }
-
-
+        //public static string GetClaimUser()
+        //{
+        //    //var username = HttpContext.Current.User.Identity.Name;
+        //    var username = GetUserIdWithDomain().Name.Split('\\');
+        //    return username[1];
+        //}
         //public static string GetUserDisplayName()
         //{
         //    var id = GetUserIdWithDomain().Name.Split('\\');
@@ -83,7 +86,7 @@ namespace eForms.Services.Interfaces
         {
             ClaimsPrincipal claims = httpContextAccessor.HttpContext.User;
             string email = claims.Claims.Where(x => x.Type == ClaimTypes.Upn).FirstOrDefault().Value;
-            return ctx.tbl_eForm_Users
+            return ctx.tbl_Users
                 .Where(x => x.EmailAddress == email)
                 .Select(x => x.Id);
         }
@@ -91,7 +94,7 @@ namespace eForms.Services.Interfaces
         {
             var username = GetUserIdWithDomain().Name.Split('\\');
 
-            var userid = context.tbl_eForm_Users
+            var userid = context.tbl_Users
                 .Where(x => x.Username == username[1])
                 .Select(x => x.Id)
                 .SingleOrDefault();
@@ -102,7 +105,7 @@ namespace eForms.Services.Interfaces
             }
             else
             {
-                var permissionQuery = context.tbl_eForm_UserRoles
+                var permissionQuery = context.tbl_UserRoles
                    .Where(x => x.Role == ExtensionsEnum.GetDisplay(role)
                    && x.UserId == userid)
                    .Select(x => x.Id)
@@ -117,54 +120,18 @@ namespace eForms.Services.Interfaces
             }
 
         }
-        //public IQueryable<tbl_eForm_UserRole> GetRolesForUser(int userid)
-        //{
-        //    return GetPermissions(context.tbl_eForm_UserRoles
-        //        .Where(x => x.UserId == userid)
-        //        .Select(x => x.Role)
-        //    );
-        //}
-        //public IQueryable<tbl_eForm_UserRole> GetPermissions()
-        //{
-        //    return GetPermissions(GetUserID());
-        //}
-
         public async Task VerifyRole(Roles role, int formId)
         {
             if (!await Check(role, formId)) throw new UnauthorizedAccessException();
-
-            //if (!await Check(role, formId)) throw new HttpResponseException(HttpStatusCode.Unauthorized);
-            //if (!await Check(role, formId)) 
-            //    throw new ApplicationException(ErrorCodes.UnauthorizedAccess, "This is our custom exception");
-            //401 error(Unauthorized access)
         }
-        //public async Task VerifyRoleAndFormID(Roles role, int formId)
-        //{
-        //    if (!await Check(role, formId)) throw new UnauthorizedAccessException();
-        //}
+
         private IQueryable<int> GetUserID(string username)
         {
             //var username = GetUserIdWithDomain().Name.Split('\\');
-            return context.tbl_eForm_Users
+            return context.tbl_Users
                     .Where(x => x.Username == username)
                     .Select(x => x.Id);
         }
-        //private IQueryable<tbl_eForm_User> GetUserID(IeFormsContext ctx)
-        //{
-        //    var username = GetUserIdWithDomain().Name.Split('\\');
-        //    //string email = claims.Claims.Where(x => x.Type == ClaimTypes.Upn).FirstOrDefault().Value;
-        //    return ctx.tbl_eForm_Users
-        //        .Where(x => x.Username == username[1].ToString())
-        //        .Select(x => x.Id);
-        //}
-
-        //public Task<ClaimsPrincipal> TransformAsync(ClaimsPrincipal principal)
-        //{
-        //    var CurrentLoggedInID = GetUserId();
-        //    var CurrentLoggedInName = GetClaimUser();
-        //    ((ClaimsIdentity)principal.Identity).AddClaim(
-        //        new Claim("ExampleClaim", "true"));
-        //    return Task.FromResult(principal);
-        //}
+        
     }
 }

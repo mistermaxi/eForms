@@ -13,9 +13,9 @@ namespace eForms.Services.Interfaces
 {
     public interface IAuthService
     {
-        //public Task VerifyRole(Roles role);
         public Task VerifyRole(Roles role, int formId);
+        public string GetUserWithoutDomain();
+        public Task<bool> Check(Roles role, int formId);
 
-        //Task<ClaimsPrincipal> TransformAsync(ClaimsPrincipal principal);
     }
 }

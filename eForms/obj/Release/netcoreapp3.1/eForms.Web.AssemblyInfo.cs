@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("cf9a7c4d-f405-4621-bdf8-e14b1b90f1e1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("U.S. Embassy Bangkok, Thailand")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]

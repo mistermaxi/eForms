@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using eForms.Services.AutoMapper;
 using eForms.Services.Interfaces;
 using eForms.Services.Services;
-using eForms.Services.Permissions;
+//using eForms.Services.Permissions;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using eForms.Domain.Context;
@@ -29,6 +29,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.AspNetCore.Server.IISIntegration;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace eForms
 {
@@ -79,9 +80,18 @@ namespace eForms
 
             /////////////////////////////
             services.AddTransient<IUserService, UserService>();
+            //services.AddTransient<IUserRoleService, UserRoleService>();
             services.AddTransient<IProfileService, ProfileService>();
+            services.AddTransient<IADSIService, ADSIService>();
+
             /////////////////////////////
             services.AddTransient<IUploadService, UploadService>();
+            services.AddTransient<IPDFService, PDFService>();
+            services.AddTransient<INewArrivalService, NewArrivalService>();
+            services.AddTransient<IOpenNetService, OpenNetService>();
+            services.AddTransient<IClassNetService, ClassNetService>();
+            services.AddTransient<IDS7642Service, DS7642Service>();
+            services.AddTransient<IeFormService, eFormService>();
 
             /////////////////////////////
             services.AddTransient<IBuildingService, BuildingService>();
@@ -101,6 +111,9 @@ namespace eForms
 
             /////////////////////////////
             services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<IEncryptDecryptService, EncryptDecryptService>();
+            services.AddTransient<IEmailService, EmailService>();
+
             /////////////////////////////
 
             services.AddAuthorization();
@@ -114,6 +127,13 @@ namespace eForms
             // HttpSysDefaults requires the following import:
             // using Microsoft.AspNetCore.Server.HttpSys;
             //services.AddAuthentication(HttpSysDefaults.AuthenticationScheme);
+            //services.AddDataProtection();
+            //services.AddDataProtection()
+            //   .UseCryptographicAlgorithms(new AuthenticatedEncryptionSettings()
+            //   {
+            //       EncryptionAlgorithm = EncryptionAlgorithm.AES_256_GCM,
+            //       ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
+            //   });
 
 
             services.AddControllersWithViews();
@@ -129,7 +149,7 @@ namespace eForms
                 var _context = serviceScope.ServiceProvider.GetRequiredService<eFormsContext>();
                 _context.Database.EnsureCreated();
             }
-            //UpdateDatabase(app);
+            UpdateDatabase(app);
 
             app.UseCors();
 
@@ -152,6 +172,7 @@ namespace eForms
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
@@ -162,17 +183,18 @@ namespace eForms
             });
 
         }
-        //private void UpdateDatabase(IApplicationBuilder app)
-        //{
-        //    using (IServiceScope serviceScope = app.ApplicationServices
-        //        .GetRequiredService<IServiceScopeFactory>()
-        //        .CreateScope())
-        //    {
-        //        using (eFormsContext context = serviceScope.ServiceProvider.GetService<eFormsContext>())
-        //        {
-        //            context.Database.Migrate();
-        //        }
-        //    }
-        //}
+        private void UpdateDatabase(IApplicationBuilder app)
+        {
+            using (IServiceScope serviceScope = app.ApplicationServices
+                .GetRequiredService<IServiceScopeFactory>()
+                .CreateScope())
+            {
+                using (eFormsContext context = serviceScope.ServiceProvider.GetService<eFormsContext>())
+                {
+                    context.Database.Migrate();
+                }
+            }
+        }
+       
     }
 }

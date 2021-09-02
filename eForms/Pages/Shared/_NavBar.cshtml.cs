@@ -9,8 +9,11 @@ namespace eForms.Pages.Shared
 {
     public class _NavBarModel : PageModel
     {
+
+        
         public void OnGet()
         {
+            
         }
     }
 }

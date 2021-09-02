@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace eForms.Services.Models
 {
-    public class UploadDocModel
+    public class UploadDocModel : DefaultModel
     {
+        public int FormID { get; set; }
         public string GUID { get; set; }
         public string FileName { get; set; }
         public string FileType { get; set; }

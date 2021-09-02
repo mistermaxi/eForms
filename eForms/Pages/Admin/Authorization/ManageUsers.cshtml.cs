@@ -12,9 +12,9 @@ namespace eForms.Pages.Admin
     public class ManageUsersModel : PageModel
     {
         public IEnumerable<UsersModel> users { get; set; }
+        public IEnumerable<UserRolesModel> userroles { get; set; }
 
         IUserService userService;
-
         public ManageUsersModel(IUserService _userService)
         {
             userService = _userService;
@@ -23,6 +23,11 @@ namespace eForms.Pages.Admin
         {
             users = await userService.GetAllUsers();
         }
-
+        public async Task<IActionResult> OnPostDelete(int id)
+        {
+            await userService.DeleteUser(id);
+            return RedirectToPage("ManageUsers").WithSuccess("Info", "Succesfully deleted!");
+            
+        }
     }
 }

@@ -36,6 +36,7 @@
         <link rel="stylesheet" type="text/css" href="~/lib/DataTables/datatables.css" />
         <link rel="stylesheet" type="text/css" href="~/lib/DataTables/responsive.dataTables.min.css">
     </environment>
+    
 
     @RenderSection("Headers", required: false)
 
@@ -45,7 +46,7 @@
 
 <!-- BODY -->
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-
+    
     @*<partial name="_CookieConsentPartial" />*@
 
     <!-- NAVBAR -->
@@ -65,12 +66,13 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">@ViewData["breadcrumb1"]</li>
                 @*<li class="breadcrumb-item">
-                        <a href="#">Admin</a>
-                    </li>*@
+                <a href="#">Admin</a>
+            </li>*@
                 <li class="breadcrumb-item active">@ViewData["breadcrumb2"]</li>
 
             </ol>
-
+            <partial name="_StatusMessages" />
+            @*@Html.Partial("_StatusMessages")*@
             @RenderBody()
         </main>
         <!-- END MAIN CONTENT -->
@@ -83,7 +85,7 @@
 
     <footer class="app-footer">
         <div>
-            <a href="#">eForms V 1.0.0</a>
+            <a href="#">eForms V 2.0</a>
             @*<span>U.S. Department of State&nbsp;&nbsp;- Sensitive but unclassified</span>*@
         </div>
         <div class="ml-auto">
@@ -101,8 +103,8 @@
         <script src="~/lib/coreui/dist/js/coreui.js"></script>
         <!-- Plugins and scripts required by this view-->
         @*<script src="~/lib/chart.js/dist/Chart.js"></script>
-        <script src="~/lib/coreui/js/custom-tooltips.js"></script>
-        <script src="~/lib/coreui/js/main.js"></script>*@
+            <script src="~/lib/coreui/js/custom-tooltips.js"></script>
+            <script src="~/lib/coreui/js/main.js"></script>*@
         <script src="~/js/site.js" asp-append-version="true"></script>
         <script type="text/javascript" src="~/lib/DataTables/DataTables.js"></script>
         @*<script type="text/javascript" src="~/lib/DataTables/dataTables.responsive.min.js"></script>*@
@@ -117,8 +119,8 @@
         <script src="~/lib/coreui/dist/js/coreui.min.js"></script>
         <!-- Plugins and scripts required by this view-->
         @*<script src="~/lib/chart.js/dist/Chart.min.js"></script>
-        <script src="~/lib/coreui/js/custom-tooltips.js"></script>
-        <script src="~/lib/coreui/js/main.js"></script>*@
+            <script src="~/lib/coreui/js/custom-tooltips.js"></script>
+            <script src="~/lib/coreui/js/main.js"></script>*@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
         <script type="text/javascript" src="~/lib/DataTables/DataTables.js"></script>
         @*<script type="text/javascript" src="~/lib/DataTables/dataTables.responsive.min.js"></script>*@
@@ -126,13 +128,14 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
-<script>
-    $(document).ready(function () {
-        $('#eformtbl').DataTable();
+    <script>
+        $(document).ready(function () {
+            $('#eformtbl').DataTable();
 
-    });
+        });
+        //$("#status-alert").fadeOut(3000);
+       
 
-    
-</script>
+    </script>
 </body>
 </html>

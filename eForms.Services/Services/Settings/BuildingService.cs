@@ -4,6 +4,7 @@ using eForms.Domain.Enums;
 using eForms.Domain.Models;
 using eForms.Services.Interfaces;
 using eForms.Services.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,7 +27,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             authService = _authService;
         }
-        private DbSet<tbl_rBuildingAnnex> GetDbSet()
+        private DbSet<BuildingAnnexes> GetDbSet()
         {
             return context.tbl_rBuildingsAnnex;
         }
@@ -34,7 +35,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<BuildingAnnexModel>> GetAllBuildings()
         {
 
-            List<BuildingAnnexModel> dto = mapper.Map<List<tbl_rBuildingAnnex>, List<BuildingAnnexModel>>(await GetDbSet().ToListAsync());
+            List<BuildingAnnexModel> dto = mapper.Map<List<BuildingAnnexes>, List<BuildingAnnexModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -42,32 +43,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rBuildingAnnex> GetQueryable()
+        private IQueryable<BuildingAnnexes> GetQueryable()
         {
             return context.tbl_rBuildingsAnnex;
         }
         public async Task<BuildingAnnexModel> ReadAsync(int id)
         {
-            tbl_rBuildingAnnex model = await GetDbSet()
+            BuildingAnnexes model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<BuildingAnnexModel>(model);
-        }        
+        }
         public async Task<int> CreateBuilding(BuildingAnnexModel model)
         {
-            tbl_rBuildingAnnex building = mapper.Map<tbl_rBuildingAnnex>(model);
+            BuildingAnnexes building = mapper.Map<BuildingAnnexes>(model);
             context.tbl_rBuildingsAnnex.Add(building);
             await context.SaveChangesAsync();
             return building.Id;
         }
         public async Task UpdateBuildingAsync(BuildingAnnexModel model)
         {
-            context.tbl_rBuildingsAnnex.Update(mapper.Map<tbl_rBuildingAnnex>(model));
+            context.tbl_rBuildingsAnnex.Update(mapper.Map<BuildingAnnexes>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<BuildingAnnexModel>> SearchForBuildingsAsync(string search)
         {
-            List<tbl_rBuildingAnnex> agencies = await context.tbl_rBuildingsAnnex
+            List<BuildingAnnexes> agencies = await context.tbl_rBuildingsAnnex
                 .Where(x => x.BuildingAnnex.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,8 +76,21 @@ namespace eForms.Services.Interfaces
         }
         public async Task DeleteBuilding(int id)
         {
-            await authService.VerifyRole(Roles.Admin, 0);
-            context.tbl_rBuildingsAnnex.Remove(new tbl_rBuildingAnnex() { Id = id });
+            //await authService.VerifyRole(Roles.Admin, 0);
+            //if (await authService.Check(Roles.Admin, 0) == false)
+            //{
+            //    //RedirectToActionResult redirectResult = new RedirectToActionResult();
+            //    //RedirectToActionResult redirectResult = new RedirectToActionResult("Error", "Error", new { @Id = "401" });
+            //    //return redirectResult;
+            //    //await redirectResult(401);
+            //    //context.tbl_rBuildingsAnnex.Remove(new tbl_rBuildingAnnex() { Id = 0 });
+            //}
+            //else
+            //{
+            //    context.tbl_rBuildingsAnnex.Remove(new tbl_rBuildingAnnex() { Id = id });
+            //    await context.SaveChangesAsync();
+            //}
+            context.tbl_rBuildingsAnnex.Remove(new BuildingAnnexes() { Id = id });
             await context.SaveChangesAsync();
         }
     }

@@ -11,12 +11,22 @@ namespace eForms.Services.Models
     public class UsersModel : DefaultModel
     {
         public string Username { get; set; }
-
+        public string DisplayName { get; set; }
         public string OfficePhone { get; set; }
-
         public string Remark { get; set; }
         public string EmailAddress { get; set; }
-        public virtual IList<tbl_eForm_UserRole> UserRoles { get; set; }
+        
+        ///////////
+        
+        public string Role { get; set; }
+        public int RoleID { get; set; }
+        public int FormId { get; set; }
+        public string FormTitle { get; set; }
+
+        ///////////
+        public virtual IList<UserRole> UserRoles { get; set; }
         public IEnumerable<string> Roles { get; set; }
+
+        
     }
 }

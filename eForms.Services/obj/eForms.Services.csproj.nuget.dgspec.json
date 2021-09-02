@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -131,6 +131,10 @@
               "target": "Package",
               "version": "[5.0.376, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.4, )"
@@ -142,6 +146,10 @@
             "Microsoft.Graph": {
               "target": "Package",
               "version": "[3.28.0, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[7.1.15, )"
             }
           },
           "imports": [
@@ -162,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
         }
       }
     }

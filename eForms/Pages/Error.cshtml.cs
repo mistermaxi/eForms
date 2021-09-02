@@ -28,46 +28,32 @@ namespace eForms.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
-
-            var exceptionHandlerPathFeature =
-            HttpContext.Features.Get<IExceptionHandlerPathFeature>();
-            if (exceptionHandlerPathFeature?.Error is FileNotFoundException)
-            {
-                ExceptionMessage = "File error thrown";
-                _logger.LogError(ExceptionMessage);
-            }
-            if (exceptionHandlerPathFeature?.Path == "/index")
-            {
-                ExceptionMessage += " from home page";
-            }
-        }
-        //public void OnGet()
-        //{
-        //    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
-        //}
-        //public void OnGet()
+        //public void OnGet(int id)
         //{
         //    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
 
         //    var exceptionHandlerPathFeature =
         //    HttpContext.Features.Get<IExceptionHandlerPathFeature>();
-        //    var ctx = HttpContext;
-        //    var feature = ctx.Features.Get<IExceptionHandlerPathFeature>();
-        //    ctx.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-        //    var exception = feature.Error;
-        //    string message = exception switch
+        //    if (exceptionHandlerPathFeature?.Error is FileNotFoundException)
         //    {
-        //        ArgumentException ae => $"{ae.ParamName} & {ae.Message}",
-        //        DataException de => $"{de.Message}",
-        //        ArithmeticException are => $"{are.Message}",
-        //        _ => "oops!"
-        //    };
-
-        //    Message = message;
+        //        ExceptionMessage = "File error thrown";
+        //        _logger.LogError(ExceptionMessage);
+        //    }
+        //    if (exceptionHandlerPathFeature?.Path == "/index")
+        //    {
+        //        ExceptionMessage += " from home page";
+        //    }
         //}
-        //public string Message { get; set; }
+
+        public async Task OnGet(int id)
+        {
+            if (id == 1)
+            {
+                RequestId = "User already assigned role to this form!";            
+            }
+            else
+                RequestId = "Sorry, your are not authorized to process this action!";
+        }
+        
     }
 }

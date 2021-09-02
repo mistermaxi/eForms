@@ -8,7 +8,14 @@
       "TRACE",
       "RELEASE",
       "NETCOREAPP",
-      "NETCOREAPP3_1"
+      "NETCOREAPP3_1",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER",
+      "NETCOREAPP3_0_OR_GREATER",
+      "NETCOREAPP3_1_OR_GREATER"
     ],
     "languageVersion": "8.0",
     "platform": "",
@@ -29,7 +36,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
-          "eForms.API": "1.0.0",
           "eForms.Domain": "1.0.0",
           "eForms.Services": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -213,12 +219,12 @@
           "System.Net.NetworkInformation": "4.2.2.0",
           "System.Net.Ping": "4.1.2.0",
           "System.Net.Primitives.Reference": "4.1.2.0",
-          "System.Net.Requests.Reference": "4.1.2.0",
+          "System.Net.Requests": "4.1.2.0",
           "System.Net.Security": "4.1.2.0",
           "System.Net.ServicePoint": "4.0.2.0",
           "System.Net.Sockets.Reference": "4.2.2.0",
           "System.Net.WebClient": "4.0.2.0",
-          "System.Net.WebHeaderCollection.Reference": "4.1.2.0",
+          "System.Net.WebHeaderCollection": "4.1.2.0",
           "System.Net.WebProxy": "4.0.2.0",
           "System.Net.WebSockets.Client": "4.1.2.0",
           "System.Net.WebSockets": "4.1.2.0",
@@ -413,7 +419,7 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "itext7/7.1.14": {
+      "itext7/7.1.15": {
         "dependencies": {
           "Common.Logging": "3.4.1",
           "Microsoft.Extensions.DependencyModel": "3.1.6",
@@ -421,7 +427,6 @@
           "System.Collections.NonGeneric": "4.3.0",
           "System.Diagnostics.Process": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
-          "System.Net.Requests": "4.3.0",
           "System.Runtime.Loader": "4.3.0",
           "System.Runtime.Serialization.Formatters": "4.3.0",
           "System.Security.Cryptography.Csp": "4.3.0",
@@ -432,40 +437,40 @@
         },
         "runtime": {
           "lib/netstandard2.0/itext.barcodes.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.forms.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.io.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.kernel.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.layout.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.pdfa.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.sign.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.styledxmlparser.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           },
           "lib/netstandard2.0/itext.svg.dll": {
-            "assemblyVersion": "7.1.14.0",
-            "fileVersion": "7.1.14.0"
+            "assemblyVersion": "7.1.15.0",
+            "fileVersion": "7.1.15.0"
           }
         },
         "compile": {
@@ -1990,23 +1995,6 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
-      "System.Net.Requests/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Net.Http": "4.3.4",
-          "System.Net.Primitives": "4.3.0",
-          "System.Net.WebHeaderCollection": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        }
-      },
       "System.Net.Sockets/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2015,14 +2003,6 @@
           "System.Net.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
-        }
-      },
-      "System.Net.WebHeaderCollection/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0"
         }
       },
       "System.ObjectModel/4.3.0": {
@@ -2527,18 +2507,6 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "eForms.API/1.0.0": {
-        "dependencies": {
-          "eForms.Domain": "1.0.0",
-          "itext7": "7.1.14"
-        },
-        "runtime": {
-          "eForms.API.dll": {}
-        },
-        "compile": {
-          "eForms.API.dll": {}
-        }
-      },
       "eForms.Domain/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.4",
@@ -2559,7 +2527,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.4",
           "Microsoft.Graph": "3.28.0",
-          "eForms.Domain": "1.0.0"
+          "eForms.Domain": "1.0.0",
+          "itext7": "7.1.15"
         },
         "runtime": {
           "eForms.Services.dll": {}
@@ -3654,7 +3623,7 @@
         },
         "compileOnly": true
       },
-      "System.Net.Requests.Reference/4.1.2.0": {
+      "System.Net.Requests/4.1.2.0": {
         "compile": {
           "System.Net.Requests.dll": {}
         },
@@ -3684,7 +3653,7 @@
         },
         "compileOnly": true
       },
-      "System.Net.WebHeaderCollection.Reference/4.1.2.0": {
+      "System.Net.WebHeaderCollection/4.1.2.0": {
         "compile": {
           "System.Net.WebHeaderCollection.dll": {}
         },
@@ -4239,12 +4208,12 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "itext7/7.1.14": {
+    "itext7/7.1.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qqra61RJH3RWBkYTvrPVQpcYpkam4NihxgsfE+3NtJ9ZySwJT+TUogEdveL+PfJtqmtbou2SHbkRU606E7N03w==",
-      "path": "itext7/7.1.14",
-      "hashPath": "itext7.7.1.14.nupkg.sha512"
+      "sha512": "sha512-BJKdScf6C7LlHB5pV5fr0qHGbrPLX1yl+1R1qHroRZxtyTVFMeZ9gPV6IOsmgTRLr2ee9hUXHbb8/ZqKB4pqiA==",
+      "path": "itext7/7.1.15",
+      "hashPath": "itext7.7.1.15.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
@@ -5037,26 +5006,12 @@
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
     },
-    "System.Net.Requests/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OZNUuAs0kDXUzm7U5NZ1ojVta5YFZmgT2yxBqsQ7Eseq5Ahz88LInGRuNLJ/NP2F8W1q7tse1pKDthj3reF5QA==",
-      "path": "system.net.requests/4.3.0",
-      "hashPath": "system.net.requests.4.3.0.nupkg.sha512"
-    },
     "System.Net.Sockets/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
-    },
-    "System.Net.WebHeaderCollection/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XZrXYG3c7QV/GpWeoaRC02rM6LH2JJetfVYskf35wdC/w2fFDFMphec4gmVH2dkll6abtW14u9Rt96pxd9YH2A==",
-      "path": "system.net.webheadercollection/4.3.0",
-      "hashPath": "system.net.webheadercollection.4.3.0.nupkg.sha512"
     },
     "System.ObjectModel/4.3.0": {
       "type": "package",
@@ -5435,11 +5390,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "eForms.API/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "eForms.Domain/1.0.0": {
       "type": "project",
@@ -6356,7 +6306,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Net.Requests.Reference/4.1.2.0": {
+    "System.Net.Requests/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6381,7 +6331,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Net.WebHeaderCollection.Reference/4.1.2.0": {
+    "System.Net.WebHeaderCollection/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

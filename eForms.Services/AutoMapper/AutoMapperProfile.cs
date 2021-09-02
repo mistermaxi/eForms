@@ -19,30 +19,47 @@ namespace eForms.Services.AutoMapper
             CreateMap<string, Enum>().ConvertUsing((s, e) => ExtensionsEnum.Parse(e.GetType(), s));
             CreateMap<Enum, string>().ConvertUsing(e => ExtensionsEnum.GetDisplay(e));
 
-            ///////////////////////////////           
+            ///////////////////////////////
 
-            CreateMap<tbl_eForm_User, UsersModel>().ReverseMap();
-            CreateMap<tbl_eForm_UserRole, UserRolesModel>().ReverseMap();
+            CreateMap<User, UsersModel>().ReverseMap();
+            CreateMap<UserRole, UserRolesModel>().ReverseMap();
+            CreateMap<ADUser, ADUserModel>().ReverseMap();
 
             ///////////////////////////////
-            //CreateMap<tbl_eFormReqOpenNet, tbl_eFormReqOpenNet>().ReverseMap();
-            CreateMap<tbl_eFormUploadDoc, UploadDocModel>().ReverseMap();
+            CreateMap<OpenNetReq, OpenNetModel>().ReverseMap();
+            CreateMap<ClassNetReq, ClassNetModel>().ReverseMap();
+            CreateMap<DS7642, DS7642Model>().ReverseMap();
+            CreateMap<DS7642Detail, DS7642DetailModel>().ReverseMap();
+            CreateMap<NewArrvEMP, NewArrvEMPModel>().ReverseMap();
+            CreateMap<NewArrvDEP, NewArrvDEPModel>().ReverseMap();
+            CreateMap<NewArrvEMERG, NewArrvEMERGModel>().ReverseMap();
+            CreateMap<NewArrvLANG, NewArrvLANGModel>().ReverseMap();
+            CreateMap<UploadDoc, UploadDocModel>().ReverseMap();
 
             ///////////////////////////////
-            CreateMap<tbl_rBuildingAnnex, BuildingAnnexModel>().ReverseMap();
-            CreateMap<tbl_rCountry, CountryModel>().ReverseMap();
-            CreateMap<tbl_rEmployeeType, EmpTypeModel>().ReverseMap();
-            CreateMap<tbl_rForm, FormModel>().ReverseMap();
-            CreateMap<tbl_rIPC, IPCModel>().ReverseMap();
-            CreateMap<tbl_rISO, ISOModel>().ReverseMap();
-            CreateMap<tbl_rISSO, ISSOModel>().ReverseMap();
-            CreateMap<tbl_rLanguage, LanguageModel>().ReverseMap();
-            CreateMap<tbl_rMilitaryRank, MilitaryRankModel>().ReverseMap();
-            CreateMap<tbl_rPost, PostModel>().ReverseMap();
-            CreateMap<tbl_rPrefix, PrefixModel>().ReverseMap();
-            CreateMap<tbl_rRelationship, RelationshipModel>().ReverseMap();
-            CreateMap<tbl_rSection, SectionModel>().ReverseMap();
-            CreateMap<tbl_rState, StateModel>().ReverseMap();
+            CreateMap<Manufacturer, ManufacturerModel>().ReverseMap();
+            CreateMap<MBDevice, MBDeviceModel>().ReverseMap();
+            CreateMap<Model, ModelModel>().ReverseMap();
+            CreateMap<Sim, SimModel>().ReverseMap();
+            CreateMap<Transaction, TransactionModel>().ReverseMap();
+            CreateMap<TransactionDetail, TransactionDetailModel>().ReverseMap();
+
+            ///////////////////////////////
+            CreateMap<BuildingAnnexes, BuildingAnnexModel>().ReverseMap();
+            CreateMap<Country, CountryModel>().ReverseMap();
+            CreateMap<EmployeeType, EmpTypeModel>().ReverseMap();
+            CreateMap<Forms, FormModel>().ReverseMap();
+            CreateMap<IPC, IPCModel>().ReverseMap();
+            CreateMap<ISO, ISOModel>().ReverseMap();
+            CreateMap<ISSO, ISSOModel>().ReverseMap();
+            CreateMap<Languages, LanguageModel>().ReverseMap();
+            CreateMap<MilitaryRanks, MilitaryRankModel>().ReverseMap();
+            CreateMap<Posts, PostModel>().ReverseMap();
+            CreateMap<Prefixes, PrefixModel>().ReverseMap();
+            CreateMap<Relationships, RelationshipModel>().ReverseMap();
+            CreateMap<Sections, SectionModel>().ReverseMap();
+            CreateMap<SMTP, SMTPModel>().ReverseMap();
+            CreateMap<State, StateModel>().ReverseMap();
 
             ///////////////////////////////
 

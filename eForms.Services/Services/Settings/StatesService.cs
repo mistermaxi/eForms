@@ -25,7 +25,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rState> GetDbSet()
+        private DbSet<State> GetDbSet()
         {
             return context.tbl_rStates;
         }
@@ -33,7 +33,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<StateModel>> GetAllStates()
         {
 
-            List<StateModel> dto = mapper.Map<List<tbl_rState>, List<StateModel>>(await GetDbSet().ToListAsync());
+            List<StateModel> dto = mapper.Map<List<State>, List<StateModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -41,32 +41,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rState> GetQueryable()
+        private IQueryable<State> GetQueryable()
         {
             return context.tbl_rStates;
         }
         public async Task<StateModel> ReadAsync(int id)
         {
-            tbl_rState model = await GetDbSet()
+            State model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<StateModel>(model);
         }
         public async Task<int> CreateState(StateModel model)
         {
-            tbl_rState state = mapper.Map<tbl_rState>(model);
+            State state = mapper.Map<State>(model);
             context.tbl_rStates.Add(state);
             await context.SaveChangesAsync();
             return state.Id;
         }
         public async Task UpdateStateAsync(StateModel model)
         {
-            context.tbl_rStates.Update(mapper.Map<tbl_rState>(model));
+            context.tbl_rStates.Update(mapper.Map<State>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<StateModel>> SearchForStatesAsync(string search)
         {
-            List<tbl_rState> states = await context.tbl_rStates
+            List<State> states = await context.tbl_rStates
                 .Where(x => x.StateName.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -75,7 +75,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteState(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageMilRank, id);
-            context.tbl_rStates.Remove(new tbl_rState() { Id = id });
+            context.tbl_rStates.Remove(new State() { Id = id });
             await context.SaveChangesAsync();
         }
     }

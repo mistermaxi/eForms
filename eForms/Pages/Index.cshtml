@@ -1,8 +1,9 @@
 ﻿@page
-@{ 
-    ViewData["Title"] = "eForms Application";    
+@model eForms.Pages.IndexModel
+@{
+    ViewData["Title"] = "eForms Application";
     ViewData["breadcrumb1"] = "Home";
-    ViewData["breadcrumb2"] = "Forms Catalog"; 
+    ViewData["breadcrumb2"] = "Forms Catalog";
 }
 
 <div class="container-fluid">
@@ -15,9 +16,9 @@
         <!-- /.row-->
         <div class="row">
             <div class="col-sm-6 col-lg-3">
-                <a asp-page="Forms" asp-route-id="18" style="display:block;text-decoration:none;">
+                <a asp-page="/Forms/NewArrival/CreateNewArrivalReq" asp-route-id="18" style="display:block;text-decoration:none;">
 
-                    <div class="card text-white bg-danger">
+                    <div class="card text-white bg-danger" style="height:200px;">
                         <div class="card-body pb-0">
                             <i class="icon-paper-plane icons font-5xl"></i>
                             <div class="text-value">New Arrival Request</div>
@@ -28,8 +29,8 @@
             </div>
             <!-- /.col-->
             <div class="col-sm-6 col-lg-3">
-                <a asp-page="Forms" asp-route-id="18" style="display:block;text-decoration:none;">
-                    <div class="card text-white bg-blue">
+                <a asp-page="/Forms/OpenNet/CreateOpenNetReq" asp-route-id="18" style="display:block;text-decoration:none;">
+                    <div class="card text-white bg-blue" style="height:200px;">
                         <div class="card-body pb-0">
                             <i class="icon-people icons font-5xl"></i>
                             <div class="text-value">OpenNet Account Request</div>
@@ -40,8 +41,8 @@
             </div>
             <!-- /.col-->
             <div class="col-sm-6 col-lg-3">
-                <a asp-page="Forms" asp-route-id="18" style="display:block;text-decoration:none;">
-                    <div class="card text-white bg-gray">
+                <a asp-page="/Forms/ClassNet/CreateClassNetReq" asp-route-id="18" style="display:block;text-decoration:none;">
+                    <div class="card text-white bg-gray" style="height:200px;">
 
                         <div class="card-body pb-0">
                             <i class="icon-shield icons font-5xl"></i>
@@ -54,8 +55,8 @@
             </div>
             <!-- /.col-->
             <div class="col-sm-6 col-lg-3">
-                <a asp-page="Forms" asp-route-id="18" style="display:block;text-decoration:none;">
-                    <div class="card text-white bg-green">
+                <a asp-page="/Forms/DS7642/CreateDS7642Req" asp-route-id="18" style="display:block;text-decoration:none;">
+                    <div class="card text-white bg-green" style="height:200px;">
 
                         <div class="card-body pb-0">
                             <i class="icon-note icons font-5xl"></i>
@@ -70,6 +71,6 @@
 
         </div>
         <!-- /.row-->
-
+        
     </div>
 </div>

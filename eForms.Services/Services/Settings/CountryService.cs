@@ -27,7 +27,7 @@ namespace eForms.Services.Interfaces
             sanitizer = _sanitizer;
             //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_rCountry> GetDbSet()
+        private DbSet<Country> GetDbSet()
         {
             return context.tbl_rCountries;
         }
@@ -35,7 +35,7 @@ namespace eForms.Services.Interfaces
         public async Task<List<CountryModel>> GetAllCountries()
         {
 
-            List<CountryModel> dto = mapper.Map<List<tbl_rCountry>, List<CountryModel>>(await GetDbSet().ToListAsync());
+            List<CountryModel> dto = mapper.Map<List<Country>, List<CountryModel>>(await GetDbSet().ToListAsync());
 
             return dto;
         }
@@ -43,32 +43,32 @@ namespace eForms.Services.Interfaces
         {
             return await GetQueryable().CountAsync();
         }
-        private IQueryable<tbl_rCountry> GetQueryable()
+        private IQueryable<Country> GetQueryable()
         {
             return context.tbl_rCountries;
         }
         public async Task<CountryModel> ReadAsync(int id)
         {
-            tbl_rCountry model = await GetDbSet()
+            Country model = await GetDbSet()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<CountryModel>(model);
         }
         public async Task<int> CreateCountry(CountryModel model)
         {
-            tbl_rCountry country = mapper.Map<tbl_rCountry>(model);
+            Country country = mapper.Map<Country>(model);
             context.tbl_rCountries.Add(country);
             await context.SaveChangesAsync();
             return country.Id;
         }
         public async Task UpdateCountryAsync(CountryModel model)
         {
-            context.tbl_rCountries.Update(mapper.Map<tbl_rCountry>(model));
+            context.tbl_rCountries.Update(mapper.Map<Country>(model));
             await context.SaveChangesAsync();
         }
         public async Task<List<CountryModel>> SearchForCountriesAsync(string search)
         {
-            List<tbl_rCountry> countries = await context.tbl_rCountries
+            List<Country> countries = await context.tbl_rCountries
                 .Where(x => x.CountryName.Contains(search))
                 .Take(5)
                 .ToListAsync();
@@ -77,7 +77,7 @@ namespace eForms.Services.Interfaces
         public async Task DeleteCountry(int id)
         {
             //await authorizationService.Challenge(PermissionType.ManageCountries, id);
-            context.tbl_rCountries.Remove(new tbl_rCountry() { Id = id });
+            context.tbl_rCountries.Remove(new Country() { Id = id });
             await context.SaveChangesAsync();
         }
     }

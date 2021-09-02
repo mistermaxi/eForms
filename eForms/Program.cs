@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore;
 using eForms.Domain;
-using eForms.Services.Permissions;
+//using eForms.Services.Permissions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -31,9 +31,9 @@ namespace eForms
                 {
                     var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-                    await DefaultRoles.SeedAsync(userManager, roleManager);
-                    //await DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
-                    await DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
+                    //await DefaultRoles.SeedAsync(userManager, roleManager);
+                    ////await DefaultUsers.SeedBasicUserAsync(userManager, roleManager);
+                    //await DefaultUsers.SeedSuperAdminAsync(userManager, roleManager);
                     logger.LogInformation("Finished Seeding Default Data");
                     logger.LogInformation("Application Starting");
                 }

@@ -10,6 +10,7 @@
     <Product>eForms Application</Product>
     <Company>U.S. Embassy Bangkok, Thailand</Company>
     <Authors>ISC</Authors>
+    <UserSecretsId>cf9a7c4d-f405-4621-bdf8-e14b1b90f1e1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
@@ -29,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="TempExport\" />
+    <Folder Include="PDF\" />
+    <Folder Include="TempUpload\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
@@ -42,7 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eForms.API\eForms.API.csproj" />
     <ProjectReference Include="..\eForms.Domain\eForms.Domain.csproj" />
     <ProjectReference Include="..\eForms.Services\eForms.Services.csproj" />
   </ItemGroup>

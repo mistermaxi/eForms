@@ -24,22 +24,23 @@ namespace eForms.Services.Interfaces
             context = _context;
             mapper = _mapper;
             sanitizer = _sanitizer;
-            //authorizationService = _authorizationService;
         }
-        private DbSet<tbl_eForm_User> GetDbSet()
+        private DbSet<User> GetDbSet()
         {
-            return context.tbl_eForm_Users;
+            return context.tbl_Users;
         }
-        public async Task<UsersModel> ReadAsync(int id)
+        
+        public async Task<UsersModel> ReadAsync(string id)
         {
-            tbl_eForm_User model = await GetDbSet()
-                .Where(x => x.Id == id)
+            User model = await GetDbSet()
+                .Where(x => x.Username == id)
                 .FirstOrDefaultAsync();
             return mapper.Map<UsersModel>(model);
         }
         public async Task UpdateProfileAsync(UsersModel model)
         {
-            context.tbl_eForm_Users.Update(mapper.Map<tbl_eForm_User>(model));
+            var profile = context.tbl_Users.Where(x => x.Id == model.Id).First();
+            profile.OfficePhone = model.OfficePhone;
             await context.SaveChangesAsync();
         }
     }

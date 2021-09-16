@@ -17,5 +17,7 @@ namespace eForms.Services.Interfaces
         public string GetUserWithoutDomain();
         public Task<bool> Check(Roles role, int formId);
 
+        public bool IsInGroup(string groupName);
+        public bool IsInGroups(List<string> groupNames);
     }
 }

@@ -32,19 +32,36 @@ namespace eForms.Services.Interfaces
             context = _context;
             httpContextAccessor = _httpContextAccessor;
         }
-        public static bool IsInGroup(string groupName)
+        public bool IsInGroup(string groupName)
         {
             var myIdentity = GetUserIdWithDomain();
             var myPrincipal = new WindowsPrincipal(myIdentity);
+
+            //WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            //var groupNames = from id in identity.Groups
+            //                 select id.Translate(typeof(NTAccount)).Value;
+
+            bool _result = myPrincipal.IsInRole(groupName);
+            bool _result2 = myPrincipal.IsInRole(groupNames);
+
+
+
             return myPrincipal.IsInRole(groupName);
         }
 
-        public bool IsInGroup(List<string> groupNames)
+        public bool IsInGroups(List<string> groupNames)
         {
             var myIdentity = GetUserIdWithDomain();
             var myPrincipal = new WindowsPrincipal(myIdentity);
+            //return groupNames.Any(group => myPrincipal.IsInRole(group));
 
-            return groupNames.Any(group => myPrincipal.IsInRole(group));
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            var _groupNames = from id in identity.Groups
+                             select id.Translate(typeof(NTAccount)).Value;
+
+            bool _result = _groupNames.Any(group => myPrincipal.IsInRole(group));
+
+            return _groupNames.Any(group => myPrincipal.IsInRole(group));
         }
 
         public static WindowsIdentity GetUserIdWithDomain()

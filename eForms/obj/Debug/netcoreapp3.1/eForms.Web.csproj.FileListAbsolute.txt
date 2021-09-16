@@ -2390,29 +2390,12 @@ C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcore
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Dashboard\CSC.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Dashboard\eForms.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\ClassNet\CreateClassNetReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\ClassNet\EditClassNetReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\ClassNet\Index.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\ClassNet\ViewClassNetReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\DS7642\CreateDS7642Req.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\DS7642\EditDS7642Req.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\DS7642\Index.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\DS7642\ViewDS7642Req.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\NewArrival\CreateNewArrivalReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\NewArrival\EditNewArrivalReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\NewArrival\Index.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\NewArrival\ViewNewArrivalReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\OpenNet\CreateOpenNetReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\OpenNet\EditOpenNetReq.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\OpenNet\Index.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Form\OpenNet\ViewOpenNetReq.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Index1.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Login.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Main\EditProfile.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Main\Forms.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Main\MyRequests.cshtml.g.cs
-C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Main\Profile.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Register.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_AsideMenu.cshtml.g.cs
 C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
@@ -4013,3 +3996,20 @@ C:\1-OpenNet\eForms\eForms\obj\Debug\netcoreapp3.1\staticwebassets\eForms.Web.St
 C:\1-OpenNet\eForms\eForms\obj\Debug\netcoreapp3.1\eForms.Web.dll
 C:\1-OpenNet\eForms\eForms\obj\Debug\netcoreapp3.1\eForms.Web.pdb
 C:\1-OpenNet\eForms\eForms\obj\Debug\netcoreapp3.1\eForms.Web.genruntimeconfig.cache
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\ClassNet\CreateClassNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\ClassNet\EditClassNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\ClassNet\ViewClassNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\DS7642\CreateDS7642Req.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\DS7642\EditDS7642Req.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\DS7642\ViewDS7642Req.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\NewArrival\CreateNewArrivalReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\NewArrival\EditNewArrivalReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\NewArrival\Index.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\NewArrival\ViewNewArrivalReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\OpenNet\CreateOpenNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\OpenNet\EditOpenNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Forms\OpenNet\ViewOpenNetReq.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\SendMail.cshtml.g.cs
+C:\Temp\01-Projects\Web Apps\ASP.NET Core\eForms\eForms\eForms\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_StatusMessages.cshtml.g.cs
